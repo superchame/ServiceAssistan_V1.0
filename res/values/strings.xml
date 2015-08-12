@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">服务助手2</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+	<string name="pull_to_refresh">下拉可以刷新</string>  
+    <string name="release_to_refresh">释放立即刷新</string>  
+    <string name="refreshing">正在刷新…</string>  
+    <string name="not_updated_yet">暂未更新过</string>  
+    <string name="updated_at">上次更新于%1$s前</string>  
+    <string name="updated_just_now">刚刚更新</string>  
+     <string name="time_error">时间有问题</string>  
+     <string name="activity_delivery_order_info_tv_outno">出库单号</string>
+     <string name="activity_login_btn">登录</string>
+     <string name="fragment_mine_title_tv">账号登录</string>
+      <string name="fragment_mine_btn">退出登录</string>
+       <string name="fragment_mine_name_tv">姓名：</string>
+        <string name="fragment_mine_org_tv">所属组织：</string>
+      <string name="activity_search_delivery_order_tv">出库单号</string>
+      <string name="activity_search_delivery_order_et">请输入查询出库单号</string>
+  		<string name="activity_search_delivery_order_btn">查询</string>
+  		<string name="activity_search_delivery_order_img">二维码扫描图标</string>
+  		<string name="activity_login_name_et_hint">手机号</string>
+  		<string name="activity_login_pwd_et_hint">密码</string>
+  		<string name="version_name">ServiceAssistant-V:</string>
+  		<string name="can_not_find_version_name">不能找到版本信息</string>
+  		<string name="scan_text">将二维码放入框内, 即可自动扫描</string>
+  		<string name="activity_delivery_order_info_tv_shopname">收货组织</string>
+  		<string name="activity_delivery_order_info_tv_ordercnt">订单数</string>
+    	<string name="activity_delivery_order_info_tv_goodssum">商品数</string>
+    	<string name="activity_delivery_order_info_tv_totalgoodssum">件数</string>
+    	<string name="activity_delivery_order_info_tv_goodslist">商品列表</string>
+    	<string name="activity_delivery_order_info_tv_count">数量</string>
+    	
+    	<string name="dialog_goods_detail_tv_skucode">SKU编码</string>
+    	<string name="dialog_goods_detail_tv_goodscode">商品条码</string>
+    	<string name="dialog_goods_detail_tv_skuname">SKU名称</string>
+    	<string name="dialog_goods_detail_tv_outqty">数量</string>
+    	<string name="dialog_goods_detail_tv_unit">单位</string>
+    	
+    	<string  name="refreshableview_edit">订单号</string>
+    	<string name="refreshableview_tv">搜索</string>
+    	
+    	<string  name="activity_order_filter_tv_storename">门店名称</string>
+    	<string  name="activity_order_filter_tv_starttime">开始时间</string>
+    	<string  name="activity_order_filter_tv_endtime">结束时间</string>
+    	<string  name="activity_order_filter_tv_orderstatus">订单状态</string>
+    	<string  name="activity_order_filter_tv_ordertype">订单类型</string>
+    	<string  name="activity_order_filter_tv_clear">清空筛选</string>
+    	<string  name="activity_order_filter_tv_ok">确定</string>
+    	
+    	<string  name="activity_purchase_filter_tv_sourcestorename">供应商名</string>
+    	<string  name="activity_purchase_filter_tv_recbase">收货仓库</string>
+    	<string  name="activity_purchase_filter_tv_purchasestatus">采购单状态</string>
+    	<string  name="activity_purchase_filter_tv_purchasetype">采购单类型</string>
+    	
+    	<string  name="filter_tv_all">全部</string>
+
+    	<string  name="purchase_filter_status_tv_createnew">新建</string>
+    	<string  name="purchase_filter_status_tv_checked">已审核</string>
+    	<string  name="purchase_filter_status_tv_recall">全部收货</string>
+    	<string  name="purchase_filter_status_tv_recsome">部分收货</string>
+    	
+    	
+    	<string  name="filter_status_tv_cancel">已取消</string>
+    
+    	<string  name="purchase_filter_type_tv_normal">普通采购单</string>
+    	<string  name="purchase_filter_type_tv_ready">预售采购单</string>
+    	<string  name="purchase_filter_type_tv_auto">自动采购单</string>
+    	
+    	<string name="order_filter_status_tv_waitsign">待签收</string>
+    	<string name="order_filter_status_tv_deliveryed">已出库</string>
+    	<string name="order_filter_status_tv_waitdelivery">待出库</string>
+    	
+    	<string name="order_filter_type_tv_baseprovide">仓配订单</string>
+    	<string name="order_filter_type_tv_ready">预售订单</string>
+    	<string name="order_filter_type_tv_spotgoods">现货订单</string>
+    	<string name="order_filter_type_tv_service">服务订单</string>
+    	<string name="order_filter_type_tv_home">宅配订单</string>
+    	
+    	<string name="purchase_count_tv_notbechecked">未审核</string>
+    	
+    	
+    	
+    	
+</resources>

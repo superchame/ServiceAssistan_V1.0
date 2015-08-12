@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <!--展示碎片的容器 -->
+    <FrameLayout 
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#F5F5F5">
+    </FrameLayout>
+	
+    <!-- 底部TabHost的容器 -->
+    <!-- android:baselineAligned 其缺省为true,也就是当使用android:orientation 为horizontal ,其子View的baseline 是对齐的，表现在不同View显示的“文字的baseline“是对齐的。
+即文字底部对齐了，如果为false，即不对齐 -->
+	<LinearLayout 
+	    android:id="@+id/ll_tabhost"
+	    android:layout_width="fill_parent"
+	    android:layout_height="50dp"
+	    android:orientation="horizontal"
+	   	android:baselineAligned="false"
+	   	android:background="@drawable/your_tabhost_border"
+	   	
+	    >
+	    
+	    <!-- 第一个选项卡 -->
+	    <RelativeLayout 
+	        android:id="@+id/search_tab"
+	        android:layout_width="0dp"
+	        android:layout_weight="1"
+	        android:layout_height="match_parent"
+	        >
+	        
+	        <ImageView 
+	            android:id="@+id/img_search"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:src="@drawable/fada2"
+	            android:layout_marginTop="2dp"
+	            android:layout_centerHorizontal="true"
+	            />
+	        
+	        <TextView 
+	            android:id="@+id/tv_search"
+	            android:layout_below="@id/img_search"
+	            android:text="统计查询"
+	            android:textSize="10sp"
+	            android:textColor="#000000"
+	            android:layout_centerHorizontal="true"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"/>
+	        
+	        
+	        
+	    </RelativeLayout>
+	    
+	    <!-- 第二个选项卡 -->
+	    <RelativeLayout 
+	        android:id="@+id/store_tab"
+	        android:layout_width="0dp"
+	        android:layout_weight="1"
+	        android:layout_height="match_parent"
+	        >
+	        
+	         <ImageView 
+	            android:id="@+id/img_store"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:src="@drawable/mendian3"
+	            android:layout_marginTop="3dp"
+	            android:layout_centerHorizontal="true"
+	            />
+	        
+	        <TextView 
+	            android:id="@+id/tv_store"
+	            android:layout_below="@id/img_store"
+	            android:text="门店助手"
+	            android:textColor="#000000"
+	             android:textSize="10sp"
+	            android:layout_centerHorizontal="true"
+	            android:layout_width="wrap_content"
+	            android:layout_marginTop="2dp"
+	            android:layout_height="wrap_content"/>
+	        
+	    </RelativeLayout>
+	    
+	    <!-- 第三个选项卡 -->
+	    <RelativeLayout 
+	        android:id="@+id/mine_tab"
+	        android:layout_width="0dp"
+	        android:layout_weight="1"
+	        android:layout_height="match_parent"
+	        >
+	        
+	         <ImageView 
+	            android:id="@+id/img_my"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:src="@drawable/my"
+	              android:layout_marginTop="2dp"
+	             android:layout_centerHorizontal="true"
+	            />
+	        
+	        <TextView 
+	            android:id="@+id/tv_my"
+	            android:layout_below="@id/img_my"
+	            android:text="我的"
+	            android:textSize="10sp"
+	            android:textColor="#000000"
+	            android:layout_centerHorizontal="true"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"/>
+	    </RelativeLayout>
+	    
+	</LinearLayout>
+</LinearLayout>

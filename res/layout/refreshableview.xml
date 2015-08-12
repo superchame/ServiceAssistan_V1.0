@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    >
+    
+    <LinearLayout 
+        android:id="@+id/refreshable_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:orientation="horizontal">
+        
+        <EditText 
+        android:id="@+id/refreshable_edit"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:text="20150703000003"
+        android:hint="@string/refreshableview_edit"
+        android:background="@drawable/shape_no_corner_without_bottom"
+        />
+        
+       <TextView 
+           android:id="@+id/refreshable_tv"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:gravity="center"
+    		android:paddingLeft="2dp"
+    		android:paddingRight="2dp"
+    		android:paddingTop="1dp"
+    		android:paddingBottom="1dp"
+           android:background="@drawable/your_tv_border"
+           android:text="@string/refreshableview_tv"
+           android:textSize="15sp"
+           android:layout_marginLeft="4dp"/>
+        
+    </LinearLayout>
+    
+    
+     
+   <com.cmbc.android.service_assistant.api.RefreshableView 
+       android:layout_below="@id/refreshable_ll"
+       android:layout_marginTop="10dp"
+        android:id="@+id/refreshable_view"  
+        android:layout_width="fill_parent"  
+        android:layout_height="fill_parent" 
+        >  
+  
+        <ListView  
+            android:id="@+id/listview"  
+            android:layout_width="fill_parent"  
+            android:layout_height="fill_parent" 
+            android:divider="#F5F5F5">  
+        </ListView>  
+    </com.cmbc.android.service_assistant.api.RefreshableView > 
+
+</RelativeLayout>

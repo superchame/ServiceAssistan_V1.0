@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:background="#F5F5F5">
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/your_item_border"
+        android:paddingBottom="10dp"
+        android:orientation="vertical">
+        
+        <!-- 门店名称 -->
+      <LinearLayout 
+          
+          android:layout_marginTop="10dp"
+          android:id="@+id/activity_order_filter_storeview"
+          android:layout_width="match_parent"
+          android:orientation="horizontal"
+          android:layout_height="wrap_content"
+          >
+          
+          <TextView 
+              android:layout_width="0dp"
+              android:layout_weight="0.3"
+              android:layout_height="wrap_content"
+              android:text="@string/activity_order_filter_tv_storename"
+              android:gravity="center"
+              />
+          
+             <TextView 
+               android:id="@+id/order_filter_storename"
+              android:layout_width="0dp"
+              android:layout_weight="0.6"
+              android:layout_height="wrap_content"
+              android:gravity="center"
+              android:text=""
+              android:textColor="#000000"
+              />
+             
+             <ImageView 
+                 android:layout_width="0dp"
+                 android:layout_weight="0.1"
+                 android:layout_height="wrap_content"
+                 android:src="@drawable/detail3"
+                 />
+          
+          
+      </LinearLayout>
+      
+       <!-- 开始时间 -->
+      <LinearLayout 
+          android:layout_marginTop="20dp"
+          android:id="@+id/activity_order_filter_starttime"
+          android:layout_width="match_parent"
+          android:orientation="horizontal"
+          android:layout_height="wrap_content"
+          >
+          
+          <TextView 
+              android:layout_width="0dp"
+              android:layout_weight="0.3"
+              android:layout_height="wrap_content"
+              android:gravity="center"
+              android:text="@string/activity_order_filter_tv_starttime"
+              />
+          
+             <TextView 
+               android:id="@+id/order_filter_starttime"
+              android:layout_width="0dp"
+              android:layout_weight="0.6"
+              android:layout_height="wrap_content"
+              android:gravity="center"
+              android:text=""
+               android:textColor="#000000"
+              />
+             
+             <ImageView 
+                 android:layout_width="0dp"
+                 android:layout_weight="0.1"
+                 android:layout_height="wrap_content"
+                 android:src="@drawable/detail3"
+                 />
+          
+          
+      </LinearLayout>
+      
+       <!-- 结束时间 -->
+      <LinearLayout 
+           android:layout_marginTop="20dp"
+          android:id="@+id/activity_order_filter_endtime"
+          android:layout_width="match_parent"
+          android:orientation="horizontal"
+          android:layout_height="wrap_content"
+          >
+          
+          <TextView 
+              android:layout_width="0dp"
+              android:layout_weight="0.3"
+              android:layout_height="wrap_content"
+              android:gravity="center"
+              android:text="@string/activity_order_filter_tv_endtime"
+              />
+          
+             <TextView 
+                 android:id="@+id/order_filter_endtime"
+              android:layout_width="0dp"
+              android:layout_weight="0.6"
+              android:gravity="center"
+              android:layout_height="wrap_content"
+              android:text=""
+               android:textColor="#000000"
+              />
+             
+             <ImageView 
+                 android:layout_width="0dp"
+                 android:layout_weight="0.1"
+                 android:layout_height="wrap_content"
+                 android:src="@drawable/detail3"
+                 />
+          
+          
+      </LinearLayout>
+      
+       <!-- 订单状态 -->
+      <LinearLayout 
+           android:layout_marginTop="20dp"
+          android:id="@+id/activity_order_filter_orderstatus"
+          android:layout_width="match_parent"
+          android:orientation="horizontal"
+          android:layout_height="wrap_content"
+          >
+          
+          <TextView 
+              android:layout_width="0dp"
+              android:layout_weight="0.3"
+              android:layout_height="wrap_content"
+              android:gravity="center"
+              android:text="@string/activity_order_filter_tv_orderstatus"
+              />
+          
+             <TextView 
+               android:id="@+id/order_filter_status"
+              android:layout_width="0dp"
+              android:layout_weight="0.6"
+              android:layout_height="wrap_content"
+              android:text=""
+              android:gravity="center"
+               android:textColor="#000000"
+              />
+             
+             <ImageView 
+                 android:layout_width="0dp"
+                 android:layout_weight="0.1"
+                 android:layout_height="wrap_content"
+                 android:src="@drawable/detail3"
+                 />
+          
+          
+      </LinearLayout>
+      
+       <!-- 订单类型 -->
+      <LinearLayout 
+           android:layout_marginTop="20dp"
+          android:id="@+id/activity_order_filter_ordertype"
+          android:layout_width="match_parent"
+          android:orientation="horizontal"
+          android:layout_height="wrap_content"
+          >
+          
+          <TextView 
+              android:layout_width="0dp"
+              android:layout_weight="0.3"
+              android:layout_height="wrap_content"
+              android:gravity="center"
+              android:text="@string/activity_order_filter_tv_ordertype"
+              />
+          
+             <TextView 
+                 android:id="@+id/order_filter_type"
+              android:layout_width="0dp"
+              android:layout_weight="0.6"
+              android:layout_height="wrap_content"
+              android:gravity="center"
+              android:text=""
+               android:textColor="#000000"
+              />
+             
+             <ImageView 
+                 android:layout_width="0dp"
+                 android:layout_weight="0.1"
+                 android:layout_height="wrap_content"
+                 android:src="@drawable/detail3"
+                 />
+          
+          
+      </LinearLayout>
+        
+    </LinearLayout>
+    
+    <TextView 
+        android:id="@+id/activity_order_filter_tv_clear"
+        android:layout_marginLeft="15dp"
+        android:layout_marginBottom="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textColor="#0099ff"
+        android:background="@drawable/your_filter_clear_button"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp"
+        android:paddingRight="11dp"
+        android:paddingLeft="11dp"
+        android:text="@string/activity_order_filter_tv_clear"/>
+    
+    <TextView 
+        android:id="@+id/activity_order_filter_tv_ok"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:textSize="20sp"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp"
+        android:paddingRight="30dp"
+        android:paddingLeft="30dp"
+        android:gravity="center"
+        android:background="@drawable/your_filter_ok_button"
+        android:textColor="#FFFFFF"
+        android:text="@string/activity_order_filter_tv_ok"/>
+
+</RelativeLayout>

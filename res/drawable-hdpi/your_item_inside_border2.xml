@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+    <!-- 边框颜色值 -->
+    <item>
+        <shape>
+            <solid android:color="#cbcbd0" />
+        </shape>
+    </item>
+    <!-- 主体背景颜色值 -->
+    
+    <item
+        android:left="1.6dp"
+        >
+        <!-- 只设置左边框 -->
+        <shape>
+            <solid android:color="#ffffff" />
+            
+        </shape>
+        
+    </item>
+</layer-list>

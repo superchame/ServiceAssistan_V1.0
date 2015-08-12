@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5" >
+    
+	<TextView 
+	    android:id="@+id/activity_purchase_count_tv_spotname"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentLeft="true"
+	    android:layout_marginTop="20dp"
+	    android:layout_marginLeft="15dp"
+	    android:text="大连物流配送中心"
+	    android:textSize="15sp"/>
+
+	<LinearLayout
+	    android:id="@+id/activity_purchase_count_ll1"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_marginTop="10dp"
+	    android:layout_marginLeft="15dp"
+	    android:layout_marginRight="15dp"
+	    android:layout_below="@+id/activity_purchase_count_tv_spotname"
+	    android:background="@drawable/your_item_border"
+	    android:orientation="horizontal"
+	    android:paddingBottom="15dp"
+	    android:paddingLeft="15dp"
+	    android:paddingRight="15dp"
+	    android:paddingTop="15dp" >
+
+	    <ImageView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center"
+	        android:src="@drawable/all" />
+
+	    <TextView
+	        android:layout_width="0dp"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center"
+	        android:layout_marginLeft="30dp"
+	        android:layout_weight="0.6"
+	        android:text="@string/purchase_filter_status_tv_recall"
+	        android:textColor="#000000"
+	        android:textSize="20sp" />
+
+	    <TextView
+	        android:id="@+id/activity_purchase_count_tv_recall"
+	        android:layout_width="0dp"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center"
+	        android:layout_marginLeft="50dp"
+	        android:layout_weight="0.4"
+	        android:text="100"
+	        android:textColor="#00CC00"
+	        android:textSize="20sp" />
+	</LinearLayout>
+    
+	<LinearLayout
+	       android:id="@+id/activity_purchase_count_ll2"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_marginLeft="15dp"
+	    android:layout_marginRight="15dp"
+	    android:layout_marginTop="15dp"
+	    
+	    android:layout_below="@+id/activity_purchase_count_ll1"
+	    android:background="@drawable/your_item_border"
+	    android:orientation="horizontal"
+	    android:paddingBottom="15dp"
+	    android:paddingLeft="15dp"
+	    android:paddingRight="15dp"
+	    android:paddingTop="15dp" >
+
+	    <ImageView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center"
+	        android:src="@drawable/some" />
+
+	    <TextView
+	        android:layout_width="0dp"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center"
+	        android:layout_marginLeft="30dp"
+	        android:layout_weight="0.6"
+	        android:text="@string/purchase_filter_status_tv_recsome"
+	        android:textColor="#000000"
+	        android:textSize="20sp" />
+
+	    <TextView
+	        android:id="@+id/activity_purchase_count_tv_recsome"
+	        android:layout_width="0dp"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center"
+	        android:layout_marginLeft="50dp"
+	        android:layout_weight="0.4"
+	        android:text="100"
+	        android:textColor="#FF0000"
+	        android:textSize="20sp" />
+	</LinearLayout>
+	
+	<LinearLayout
+	     android:id="@+id/activity_purchase_count_ll3"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_marginTop="15dp"
+	    android:layout_marginLeft="15dp"
+	    android:layout_marginRight="15dp"
+	    android:layout_below="@+id/activity_purchase_count_ll2"
+	    android:background="@drawable/your_item_border"
+	    android:orientation="horizontal"
+	    android:paddingBottom="15dp"
+	    android:paddingLeft="15dp"
+	    android:paddingRight="15dp"
+	    android:paddingTop="15dp" >
+
+	    <ImageView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center"
+	        android:src="@drawable/checked" />
+
+	    <TextView
+	        android:layout_width="0dp"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center"
+	        android:layout_marginLeft="30dp"
+	        android:layout_weight="0.6"
+	        android:text="@string/purchase_filter_status_tv_checked"
+	        android:textColor="#000000"
+	        android:textSize="20sp" />
+
+	    <TextView
+	        android:id="@+id/activity_purchase_count_tv_checked"
+	        android:layout_width="0dp"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center"
+	        android:layout_marginLeft="50dp"
+	        android:layout_weight="0.4"
+	        android:text="100"
+	        android:textColor="#00CC00"
+	        android:textSize="20sp" />
+	</LinearLayout>
+	
+	<LinearLayout
+	     android:id="@+id/activity_purchase_count_ll4"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_marginTop="15dp"
+	    android:layout_marginLeft="15dp"
+	    android:layout_marginRight="15dp"
+	    android:layout_below="@+id/activity_purchase_count_ll3"
+	    android:background="@drawable/your_item_border"
+	    android:orientation="horizontal"
+	    android:paddingBottom="15dp"
+	    android:paddingLeft="15dp"
+	    android:paddingRight="15dp"
+	    android:paddingTop="15dp" >
+
+	    <ImageView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center"
+	        android:src="@drawable/notchecked" />
+
+	    <TextView
+	        android:layout_width="0dp"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center"
+	        android:layout_marginLeft="30dp"
+	        android:layout_weight="0.6"
+	        android:text="@string/purchase_count_tv_notbechecked"
+	        android:textColor="#000000"
+	        android:textSize="20sp" />
+
+	    <TextView
+	        android:id="@+id/activity_purchase_count_tv_notbechecked"
+	        android:layout_width="0dp"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center"
+	        android:layout_marginLeft="50dp"
+	        android:layout_weight="0.4"
+	        android:text="100"
+	        android:textColor="#FF0000"
+	        android:textSize="20sp" />
+	</LinearLayout>
+    
+</RelativeLayout>
