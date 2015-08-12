@@ -24,7 +24,7 @@ import com.cmbc.android.service_assistant.entity.User;
 
 
 /**
- * @author 民生电商android部 张超
+ * @author 民生电商android部 张超（实习生）
  * @see 登陆界面
  */
 @SuppressLint("HandlerLeak")
