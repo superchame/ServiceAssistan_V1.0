@@ -19,7 +19,7 @@ import android.widget.ImageView;
 @SuppressLint("NewApi")
 public class StoreFragment extends Fragment implements OnClickListener {
 	private User userInfo;
-	private ImageView imageView;
+	private View storerec_ll;
 	
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -31,14 +31,14 @@ public class StoreFragment extends Fragment implements OnClickListener {
 	@Override
 	public void onStart() {
 		super.onStart();
-		imageView = (ImageView) getActivity().findViewById(R.id.img_mdsh);
-		imageView.setOnClickListener(this);
+		storerec_ll = getActivity().findViewById(R.id.storerec_ll);
+		storerec_ll.setOnClickListener(this);
 	}
 
 	@Override
 	public void onClick(View view) {
 		switch (view.getId()) {
-		case R.id.img_mdsh:
+		case R.id.storerec_ll:
 			Intent intent  = new Intent(getActivity(), SearchDeliveryOrderActivity.class);
 			intent.putExtras(getActivity().getIntent().getExtras());
 			startActivity(intent);

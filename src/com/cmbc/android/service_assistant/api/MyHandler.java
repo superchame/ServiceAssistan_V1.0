@@ -22,11 +22,9 @@ public class MyHandler extends Handler {
 		//因为要跳转，所以这里还需要在new 对象时传递一个activity实例
 		//如果这里的msg.obj是jsonString的话，就得在这里解析 ，可以只解析头部信息，
 		//这里要解析头部，就要再写一个只解析头部的方法，网络服务端也要解析，
-		//两端都要解析，
-		map = (Map<String, Object>) msg.obj;
-//		if(){
-//			
-//		}
+		//两端都要解析，工作量比较繁琐
+		System.out.println("测试继承Handler后重写handleMessage方法是否还是会每次有Message就会调用，" +
+				"如果你看到这个消息，说明你成功重写了handleMessage方法！！");
 		super.handleMessage(msg);
 		
 	}

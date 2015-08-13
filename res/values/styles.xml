@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
 
     <!--
         Base application theme, dependent on API level. This theme is replaced
@@ -24,6 +24,7 @@
     <!-- 本项目中所有具有自定义标题的界面需要的风格 -->
     <style name="mystyle" parent="android:Theme">
 	<item name="android:windowTitleSize">50dp</item>
+	<item name="android:textSize">17sp</item>
 	<item name="android:windowTitleBackgroundStyle">@style/StatusBarBackground </item>
 	</style>
 	
@@ -43,6 +44,8 @@
         <item name="android:windowBackground">@android:color/transparent</item>  
         <item name="android:windowNoTitle">true</item>  
         <item name="android:windowIsFloating">true</item>  
+        
+       
     </style>  
 
 </resources>

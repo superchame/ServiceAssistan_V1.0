@@ -14,6 +14,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 import com.cmbc.android.service_assistant.R;
+import com.cmbc.android.service_assistant.api.MyHandler;
 import com.cmbc.android.service_assistant.api.NetService;
 import com.cmbc.android.service_assistant.api.OtherService;
 import com.cmbc.android.service_assistant.api.ParseTools;
@@ -41,6 +42,8 @@ public class LoginActivity extends TitleActivity {
 	private Map<String, String> map;
 	
 
+	
+	
 	private Handler handler = new Handler(){
 		@Override
 		public void handleMessage(Message msg) {

@@ -28,12 +28,14 @@ public class NetService {
 	//³£Á¿
 	private static final int SUCCESS = 1;
 	private static final int ERROR = 0;
+	private static final String HTTP = "http://123.59.44.208:8080";
+	private static final String HTTPS = "https://123.59.44.208:8080";
 	private static final String HOMEDOMAIN ="P000";
-	private static final String LOGINPATH_HTTPS = "https://123.59.44.208:8080/auth/login";
-	private static final String LOGINPATH_HTTP = "http://123.59.44.208:8080/auth/login";
-	private static final String LOGOUTPATH = "http://123.59.44.208:8080/v/logout";
-	private static final String DO_PATH ="http://123.59.44.208:8080/v/orderOut/orderOutQuery/getOrderOutInfo";
-	private static final String DOD_PATH = "http://123.59.44.208:8080/v/orderOut/orderOutQuery/getOrderOutInfoDetail";
+	private static final String LOGINPATH_HTTPS = HTTPS+"/auth/login";
+	private static final String LOGINPATH_HTTP = HTTP+"/auth/login";
+	private static final String LOGOUTPATH = HTTP+"/v/logout";
+	private static final String DO_PATH = HTTP+"/v/orderOut/orderOutQuery/getOrderOutInfo";
+	private static final String DOD_PATH = HTTP+"/v/orderOut/orderOutQuery/getOrderOutInfoDetail";
 	private static final String DOR_PATH = "http://123.59.44.208:8080/v/receiving/recv/getReceivingOrder";
 	private static final String BL_PATH = "http://123.59.44.208:8080/v/baseData/getOrgList";
 	private static final String OL_PATH = "http://123.59.44.208:8080/v/order/orderQuery/getOrderListSampleParam";

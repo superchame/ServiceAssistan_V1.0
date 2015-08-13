@@ -83,6 +83,7 @@ public class DeliveryOrderInfoActivity extends TitleActivity implements OnClickL
 		setCustormLayout(R.layout.activity_delivery_order_info, R.layout.titlebar_back_title_action);
 		initial();
 		title_tv.setText("³ö¿âµ¥ÏêÇé");
+		actionIcon.setImageResource(R.drawable.rec);
 		
 		bundle = getIntent().getExtras();
 		userInfo = bundle.getParcelable("userInfo");

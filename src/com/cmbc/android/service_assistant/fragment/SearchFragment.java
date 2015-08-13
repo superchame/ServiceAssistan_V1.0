@@ -23,7 +23,7 @@ import android.widget.Toast;
 public class SearchFragment extends Fragment implements OnClickListener{
 	
 	private User userInfo;
-	private ImageView img_orderSearch, img_buySearch, img_orderCount, img_buyCount;
+	private View ordersearch,ordercount,purchasesearch,purchasecount;
 	private Bundle bundle;
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -40,30 +40,30 @@ public class SearchFragment extends Fragment implements OnClickListener{
 	}
 	
 	public void initial(){
-		img_orderSearch = (ImageView) getActivity().findViewById(R.id.img_ddcx);
-		img_buySearch = (ImageView) getActivity().findViewById(R.id.img_cgcx);
-		img_orderCount = (ImageView) getActivity().findViewById(R.id.img_ddtj);
-		img_buyCount = (ImageView) getActivity().findViewById(R.id.img_cgdtj);
-		
-		img_orderSearch.setOnClickListener(this);
-		img_orderSearch.setOnClickListener(this);
-		img_orderCount.setOnClickListener(this);
-		img_buyCount.setOnClickListener(this);
+		ordersearch = getActivity().findViewById(R.id.ordersearch_ll);
+		ordercount = getActivity().findViewById(R.id.ordercount_ll);
+		purchasecount = getActivity().findViewById(R.id.purchasecount_ll);
+		purchasesearch = getActivity().findViewById(R.id.purchasesearch_ll);
+
+		ordersearch.setOnClickListener(this);
+		ordercount.setOnClickListener(this);
+		purchasesearch.setOnClickListener(this);
+		purchasecount.setOnClickListener(this);
 	}
 
 	@Override
 	public void onClick(View view) {
 		switch (view.getId()) {
-		case R.id.img_ddcx:
+		case R.id.ordersearch_ll:
 			Intent intent = new Intent(getActivity() , OrderSearchActivity.class);
 			intent.putExtras(bundle);
 			startActivity(intent);
 			break;
-		case R.id.img_cgcx:
+		case R.id.purchasesearch_ll:
 			break;
-		case R.id.img_ddtj:
+		case R.id.ordercount_ll:
 			break;
-		case R.id.img_cgdtj:
+		case R.id.purchasecount_ll:
 			break;
 		default:
 			break;

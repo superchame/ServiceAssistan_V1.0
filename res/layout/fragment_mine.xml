@@ -3,35 +3,39 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" 
-    android:background="#F5F5F5">
+    >
     
     <TextView 
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="50dp"
         android:text="@string/fragment_mine_title_tv"
-        android:textSize="15sp"
+        android:textSize="17sp"
         android:textColor="#000000"
+        android:padding="10dp"
         android:background="#FFFFFF"
         android:gravity="center"/>
     
 	<TableLayout 
-	    android:layout_marginTop="20dp"
-	     android:layout_width="fill_parent"  
+	    android:layout_marginTop="40dp"
+	     android:layout_width="match_parent"  
         android:layout_height="wrap_content"  
-        android:padding="10dip" 
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+       	android:paddingTop="10dp"
+       	android:paddingBottom="10dp"
+        android:background="@drawable/your_item_border"
 	    >
 	    
 	     <!-- 表格布局：第一行 -->  
         <TableRow  
             android:layout_width="fill_parent"  
             android:layout_height="wrap_content"  
-            android:background="@drawable/shape_no_corner_without_bottom"  
-            android:padding="10dip" >  
+            >  
             <TextView  
                 android:layout_width="wrap_content"  
                 android:layout_height="wrap_content"  
                 android:layout_gravity="center_vertical"  
-                android:layout_marginRight="10dip"  
+                android:layout_marginLeft="10dp"
                 android:text="@string/fragment_mine_name_tv" >  
             </TextView>  
             <TextView 
@@ -46,14 +50,14 @@
         <!-- 表格布局：第二行 -->  
         <TableRow  
             android:layout_width="fill_parent"  
+            android:layout_marginTop="10dp"
             android:layout_height="wrap_content"  
-            android:background="@drawable/shape_no_corner_without_bottom"  
-            android:padding="10dip" >  
+           	>  
             <TextView  
                 android:layout_width="wrap_content"  
                 android:layout_height="wrap_content"  
                 android:layout_gravity="center_vertical"  
-                android:layout_marginRight="10dip"  
+                android:layout_marginLeft="10dp"
                 android:text="@string/fragment_mine_org_tv" >  
             </TextView>  
             <TextView 
@@ -62,6 +66,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
                 android:text=""
                 />
             
@@ -70,14 +75,13 @@
   	
 	<Button  
         android:id="@+id/fragment_mine_btn"  
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="40dp"
         android:layout_width="match_parent"  
         android:layout_height="wrap_content"  
-        android:layout_gravity="center"  
         android:background="@drawable/your_button_border"
-        android:textColor="#FF3300"
+        android:textColor="#df5c5c"
         android:text="@string/fragment_mine_btn" />  
 
 </LinearLayout>

@@ -126,7 +126,7 @@ public class MainActivity extends BaseActivity implements OnClickListener {
 						case 0:
 							//当点击正在执行的tab时，改变控件的图片和颜色
 							search_img.setImageResource(R.drawable.fada1);
-							search_tv.setTextColor(Color.BLUE);
+							search_tv.setTextColor(Color.parseColor("#FEA64B"));
 							if(searchFragment == null){
 								//如果progress_Fragment为空，则创建一个并添加到界面上
 								searchFragment = new SearchFragment();
@@ -139,7 +139,7 @@ public class MainActivity extends BaseActivity implements OnClickListener {
 						case 1:
 							//当点击编辑任务tab时，改变控件的图片和颜色
 							store_img.setImageResource(R.drawable.mendian4);
-							store_tv.setTextColor(Color.RED);
+							store_tv.setTextColor(Color.parseColor("#FEA64B"));
 							if(storeFragment == null){
 								//如果editTask_Fragment为空，则创建一个并添加到界面上
 								storeFragment = new StoreFragment();
@@ -151,8 +151,8 @@ public class MainActivity extends BaseActivity implements OnClickListener {
 							break;
 						case 2:
 							//当点击已完成任务的tab时，改变控件的图片和颜色
-							mine_img.setImageResource(R.drawable.login_user);
-							mine_tv.setTextColor(Color.BLUE);
+							mine_img.setImageResource(R.drawable.mine2);
+							mine_tv.setTextColor(Color.parseColor("#FEA64B"));
 							if(mineFragment == null){
 								//如果finishTask_Fragment为空，则创建一个并添加到界面上
 								mineFragment = new MineFragment();
@@ -188,7 +188,7 @@ public class MainActivity extends BaseActivity implements OnClickListener {
 			search_tv.setTextColor(Color.parseColor("#000000"));
 			store_img.setImageResource(R.drawable.mendian3);
 			store_tv.setTextColor(Color.parseColor("#000000"));
-			mine_img.setImageResource(R.drawable.my);
+			mine_img.setImageResource(R.drawable.mine);
 			mine_tv.setTextColor(Color.parseColor("#000000"));	
 			
 		}

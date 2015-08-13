@@ -17,7 +17,7 @@
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
         android:orientation="vertical"
-        android:background="@drawable/my_shape_top_corner_no_bottom_line">
+        android:background="@drawable/your_item_border">
         
         <!-- 第一行 -->
         <TableRow 
@@ -156,7 +156,7 @@
         android:paddingTop="10dp"    
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
-        android:background="@drawable/my_shape_top_corner_no_bottom_line"
+        android:background="@drawable/your_item_border"
         >
       
         <LinearLayout

@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:background="#F5F5F5">
+        >
     </FrameLayout>
 	
     <!-- 底部TabHost的容器 -->
@@ -19,7 +19,7 @@
 	<LinearLayout 
 	    android:id="@+id/ll_tabhost"
 	    android:layout_width="fill_parent"
-	    android:layout_height="50dp"
+	    android:layout_height="60dp"
 	    android:orientation="horizontal"
 	   	android:baselineAligned="false"
 	   	android:background="@drawable/your_tabhost_border"
@@ -30,6 +30,7 @@
 	    <RelativeLayout 
 	        android:id="@+id/search_tab"
 	        android:layout_width="0dp"
+	     	android:gravity="center_vertical"
 	        android:layout_weight="1"
 	        android:layout_height="match_parent"
 	        >
@@ -46,11 +47,12 @@
 	        <TextView 
 	            android:id="@+id/tv_search"
 	            android:layout_below="@id/img_search"
-	            android:text="统计查询"
+	            android:text="@string/activity_main_fragment_countsearch"
 	            android:textSize="10sp"
 	            android:textColor="#000000"
 	            android:layout_centerHorizontal="true"
 	            android:layout_width="wrap_content"
+	            android:layout_marginTop="3dp"
 	            android:layout_height="wrap_content"/>
 	        
 	        
@@ -62,6 +64,7 @@
 	        android:id="@+id/store_tab"
 	        android:layout_width="0dp"
 	        android:layout_weight="1"
+	        android:gravity="center_vertical"
 	        android:layout_height="match_parent"
 	        >
 	        
@@ -77,12 +80,12 @@
 	        <TextView 
 	            android:id="@+id/tv_store"
 	            android:layout_below="@id/img_store"
-	            android:text="门店助手"
+	            android:text="@string/activity_main_fragment_storeservice"
 	            android:textColor="#000000"
 	             android:textSize="10sp"
 	            android:layout_centerHorizontal="true"
 	            android:layout_width="wrap_content"
-	            android:layout_marginTop="2dp"
+	            android:layout_marginTop="3dp"
 	            android:layout_height="wrap_content"/>
 	        
 	    </RelativeLayout>
@@ -92,6 +95,7 @@
 	        android:id="@+id/mine_tab"
 	        android:layout_width="0dp"
 	        android:layout_weight="1"
+	        android:gravity="center_vertical"
 	        android:layout_height="match_parent"
 	        >
 	        
@@ -99,7 +103,7 @@
 	            android:id="@+id/img_my"
 	            android:layout_width="wrap_content"
 	            android:layout_height="wrap_content"
-	            android:src="@drawable/my"
+	            android:src="@drawable/mine"
 	              android:layout_marginTop="2dp"
 	             android:layout_centerHorizontal="true"
 	            />
@@ -107,11 +111,12 @@
 	        <TextView 
 	            android:id="@+id/tv_my"
 	            android:layout_below="@id/img_my"
-	            android:text="我的"
+	            android:text="@string/activity_main_fragment_mine"
 	            android:textSize="10sp"
 	            android:textColor="#000000"
 	            android:layout_centerHorizontal="true"
 	            android:layout_width="wrap_content"
+	            android:layout_marginTop="3dp"
 	            android:layout_height="wrap_content"/>
 	    </RelativeLayout>
 	    

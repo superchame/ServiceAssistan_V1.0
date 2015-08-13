@@ -2,56 +2,143 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" 
-    android:background="#F5F5F5">
+    android:orientation="vertical" >
     	
-   	<LinearLayout 
-   	    
-   	    android:layout_marginTop="20dp"
-   	 	android:layout_gravity="center_horizontal"
-   	    android:layout_width="wrap_content"
-   	    android:layout_height="wrap_content"
-   	    android:orientation="horizontal"
+   	<ScrollView 
+   	    android:layout_width="fill_parent"
+   	    android:layout_height="fill_parent"
    	    >
-
-   		<ImageView
-   		    android:id="@+id/img_ddcx"
-   		    android:layout_width="wrap_content"
-   		    android:layout_height="wrap_content"
-   		    android:layout_marginRight="5dp"
-   		    android:src="@drawable/ddcx" />
-   	    
+   	    <!-- 父布局 -->
    	    <LinearLayout 
-   	        android:layout_width="0dp"
+   	        android:layout_width="match_parent"
    	        android:layout_height="wrap_content"
-   	        android:orientation="vertical"
-   	        android:layout_weight="1"
+   	        android:layout_marginLeft="20dp"
+   	        android:layout_marginRight="20dp"
+   	        android:layout_marginTop="38dp"
+   	        android:orientation="vertical">
+   	        
+   	        <!-- 第一排水平布局  -->
+   	        <LinearLayout 
+   	            android:layout_width="match_parent"
+   	            android:layout_height="236dp"
+   	            android:orientation="horizontal">
+   	            
+   	            <!-- 订单查询板块 -->
+   	            <LinearLayout
+   	                android:id="@+id/ordersearch_ll" 
+   	                android:layout_width="0dp"
+   	                android:layout_weight="0.4"
+   	                android:layout_height="match_parent"
+   	                android:orientation="vertical"
+   	                android:background="@drawable/your_ordersearch_bg"
+   	                android:gravity="center"
+   	                >
+   	                
+   	                <ImageView 
+   	                    android:layout_width="wrap_content"
+   	                    android:layout_height="wrap_content"
+   	                    android:src="@drawable/searchorder"/>
+   	                
+   	                <TextView 
+   	                    android:layout_width="wrap_content"
+   	                    android:layout_height="wrap_content"
+   	                   	android:textColor="#FFFFFF"
+   	                   	android:layout_marginTop="12dp"
+   	                    android:text="@string/fragment_search_ordersearch"/>
+   	                
+   	            </LinearLayout>
+   	            
+   	            <!--采购单查询和订单查询的父布局 -->
+   	           	<LinearLayout 
+   	           	    android:layout_width="0dp"
+   	           	    android:layout_weight="0.6"
+   	           	    android:layout_height="match_parent"
+   	           	    android:orientation="vertical"
+   	           	    android:layout_marginLeft="6dp">
+   	           	    
+   	           	    <!-- 采购单查询版块 -->
+   	           	    <LinearLayout 
+   	           	        android:id="@+id/purchasesearch_ll"
+   	           	        android:layout_width="match_parent"
+   	           	        android:layout_height="115dp"
+   	           	        android:orientation="horizontal"
+   	           	        android:background="@drawable/your_purchasesearch_bg"
+   	           	        android:gravity="center"
+   	           	        >
+   	           	        
+   	           	        <ImageView 
+   	           	            android:layout_width="wrap_content"
+   	           	            android:layout_height="wrap_content"
+   	           	            android:src="@drawable/purchasesearch"/>
+   	           	        
+   	           	        <TextView 
+   	           	            android:layout_width="wrap_content"
+   	           	            android:layout_height="wrap_content"
+   	           	            android:textColor="#FFFFFF"
+   	           	            android:layout_marginLeft="6dp"
+   	           	            android:text="@string/fragment_search_purchasesearch"/>
+   	           	        
+   	           	    </LinearLayout>
+   	           	    
+   	           	    <!-- 订单统计板块 -->
+   	           	    <LinearLayout 
+   	           	        android:id="@+id/ordercount_ll"
+   	           	        android:layout_width="match_parent"
+   	           	        android:layout_height="115dp"
+   	           	        android:layout_marginTop="6dp"
+   	           	        android:orientation="horizontal"
+   	           	        android:background="@drawable/your_ordercount_bg"
+   	           	        android:gravity="center"
+   	           	        >
+   	           	        
+   	           	        <ImageView 
+   	           	            android:layout_width="wrap_content"
+   	           	            android:layout_height="wrap_content"
+   	           	            android:src="@drawable/ordercount"/>
+   	           	        
+   	           	        <TextView 
+   	           	            android:layout_width="wrap_content"
+   	           	            android:layout_height="wrap_content"
+   	           	            android:textColor="#FFFFFF"
+   	           	        
+   	           	            android:layout_marginLeft="6dp"
+   	           	            android:text="@string/fragment_search_ordercount"/>
+   	           	        
+   	           	    </LinearLayout>
+   	           	    
+   	           	</LinearLayout>
+   	            
+   	        </LinearLayout>
+   	        
+   	        <!-- 采购单统计板块 -->
+   	        <LinearLayout 
+   	         android:id="@+id/purchasecount_ll"
+   	        android:layout_width="match_parent"
+   	        android:layout_height="115dp"
+   	        android:orientation="horizontal"
+   	        android:layout_marginTop="6dp"
+   	        android:background="@drawable/your_purchasecount_bg"
+   	        android:gravity="center"
    	        >
-
-   	        <ImageView
-   	            android:id="@+id/img_cgcx"
-   	            android:layout_width="wrap_content"
-   	            android:layout_height="wrap_content"
-   	            android:src="@drawable/cgcx" />
    	        
-   	        <ImageView 
-   	        android:id="@+id/img_ddtj"
-   	      	android:layout_marginTop="6dp"
-   	        android:src="@drawable/ddtj"
-   	        android:layout_width="wrap_content"
-   	        android:layout_height="wrap_content"
-   	        />
-   	        
+   	            <ImageView 
+   	           	            android:layout_width="wrap_content"
+   	           	            android:layout_height="wrap_content"
+   	           	            android:src="@drawable/purchasecount"/>
+   	           	        
+   	           	        <TextView 
+   	           	            android:layout_width="wrap_content"
+   	           	            android:layout_height="wrap_content"
+   	           	            android:textColor="#FFFFFF"
+   	           	            android:layout_marginLeft="6dp"
+   	           	            android:text="@string/fragment_search_purchasecount"/>
+   	            
    	    </LinearLayout>
-   	</LinearLayout>
-   	
-  <ImageView 
-      		android:id="@+id/img_cgdtj"
-   	       android:layout_gravity="center_horizontal"
-   	        android:src="@drawable/cgdtj"
-   	        android:layout_width="wrap_content"
-   	        android:layout_height="wrap_content"
-   	        android:layout_marginTop="5dp"
-   	        />
+   	    
+   	    </LinearLayout>
+   	    
+   	    
+   	    
+   	</ScrollView>
 
 </LinearLayout>
