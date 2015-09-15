@@ -12,7 +12,7 @@ public class DeliveryOrder implements Parcelable {
 	private int goodsSum;
 	private int totalGoodsSum;
 	private int orderCnt;
-	private List<DeliveryOrderDetail> goodsList;
+	private List<GoodsDetail> goodsList;
 	private String skuName;
 	private String outQty;
 	private int skuCode;
@@ -59,11 +59,11 @@ public class DeliveryOrder implements Parcelable {
 		this.orderCnt = orderCnt;
 	}
 
-	public List<DeliveryOrderDetail> getGoodsList() {
+	public List<GoodsDetail> getGoodsList() {
 		return goodsList;
 	}
  
-	public void setGoodsList(List<DeliveryOrderDetail> goodsList) {
+	public void setGoodsList(List<GoodsDetail> goodsList) {
 		this.goodsList = goodsList;
 	}
 
@@ -102,7 +102,7 @@ public class DeliveryOrder implements Parcelable {
 	
 	
 	public DeliveryOrder(String outNo, String shopName, int goodsSum,
-			int totalGoodsSum, int orderCnt, List<DeliveryOrderDetail> goodsList,
+			int totalGoodsSum, int orderCnt, List<GoodsDetail> goodsList,
 			String skuName, String outQty, int skuCode) {
 		super();
 		this.outNo = outNo;
@@ -124,7 +124,7 @@ public class DeliveryOrder implements Parcelable {
 		this.totalGoodsSum = in.readInt();
 		this.orderCnt = in.readInt();
 		
-		this.goodsList = new ArrayList<DeliveryOrderDetail>();
+		this.goodsList = new ArrayList<GoodsDetail>();
 		in.readList(goodsList, ClassLoader.getSystemClassLoader());
 		
 		this.skuName = in.readString();

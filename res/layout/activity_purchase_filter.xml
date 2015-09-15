@@ -33,11 +33,14 @@
                 android:text="@string/activity_purchase_filter_tv_sourcestorename" />
 
             <TextView
+                android:id="@+id/supplier_name_tv"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.6"
                 android:gravity="center"
                 android:text=""
+                 android:singleLine="true"
+            android:ellipsize="end"
                 android:textColor="#000000" />
 
             <ImageView
@@ -56,6 +59,7 @@
             android:orientation="horizontal" >
 
             <TextView
+                
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.3"
@@ -63,6 +67,7 @@
                 android:text="@string/activity_purchase_filter_tv_recbase" />
 
             <TextView
+                android:id="@+id/receive_base_tv"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.6"
@@ -94,6 +99,7 @@
                 android:text="@string/activity_purchase_filter_tv_purchasestatus" />
 
             <TextView
+                android:id="@+id/purchaseorder_status_tv"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.6"
@@ -125,6 +131,7 @@
                 android:text="@string/activity_purchase_filter_tv_purchasetype" />
 
             <TextView
+                android:id="@+id/purchaseorder_type_tv"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.6"

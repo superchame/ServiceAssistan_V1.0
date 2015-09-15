@@ -3,14 +3,15 @@ package com.cmbc.android.service_assistant.entity;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-public class DeliveryOrderDetail implements Parcelable {
+public class GoodsDetail implements Parcelable {
 	private String unit;
 	private String skuName;
 	private String spuCode;
 	private String outQty;
 	private String skuCode;
+	
 
-	public DeliveryOrderDetail(){
+	public GoodsDetail(){
 		
 	}
 
@@ -54,7 +55,7 @@ public class DeliveryOrderDetail implements Parcelable {
 		this.skuCode = skuCode;
 	}
 
-	public DeliveryOrderDetail(String unit, String skuName, String spuCode,
+	public GoodsDetail(String unit, String skuName, String spuCode,
 			String outQty, String skuCode) {
 		super();
 		this.unit = unit;
@@ -65,7 +66,7 @@ public class DeliveryOrderDetail implements Parcelable {
 	}
 
 
-	public DeliveryOrderDetail(Parcel in){
+	public GoodsDetail(Parcel in){
 		unit = in.readString();
 		skuName = in.readString();
 		spuCode = in.readString();
@@ -87,17 +88,17 @@ public class DeliveryOrderDetail implements Parcelable {
 		dest.writeString(skuCode);
 	}
 	
-	public static final Parcelable.Creator<DeliveryOrderDetail> CREATOR = new Parcelable.Creator<DeliveryOrderDetail>() {
+	public static final Parcelable.Creator<GoodsDetail> CREATOR = new Parcelable.Creator<GoodsDetail>() {
 
 		@Override
-		public DeliveryOrderDetail createFromParcel(Parcel in) {
-			return new DeliveryOrderDetail(in);
+		public GoodsDetail createFromParcel(Parcel in) {
+			return new GoodsDetail(in);
 		}
 
 		@Override
-		public DeliveryOrderDetail[] newArray(int size) {
+		public GoodsDetail[] newArray(int size) {
 			// TODO Auto-generated method stub
-			return new DeliveryOrderDetail[size];
+			return new GoodsDetail[size];
 		}
 		
 	};

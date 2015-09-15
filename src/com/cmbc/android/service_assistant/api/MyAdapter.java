@@ -2,7 +2,7 @@ package com.cmbc.android.service_assistant.api;
 
 import java.util.List;
 import com.cmbc.android.service_assistant.R;
-import com.cmbc.android.service_assistant.entity.DeliveryOrderDetail;
+import com.cmbc.android.service_assistant.entity.GoodsDetail;
 import android.app.Activity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -21,11 +21,11 @@ public class MyAdapter extends BaseAdapter {
 	private Activity activity;
 	
 	//这个adapter需要一个集合来存储商品信息对象
-	private List<DeliveryOrderDetail> goodsList;
+	private List<GoodsDetail> goodsList;
 	
 	
 	//构造函数
-	public MyAdapter(Activity activity , List<DeliveryOrderDetail> goodsList){
+	public MyAdapter(Activity activity , List<GoodsDetail> goodsList){
 		this.activity = activity;
 		this.goodsList = goodsList;
 	}
@@ -87,7 +87,7 @@ public class MyAdapter extends BaseAdapter {
 		
 		if(goodsList != null){
 			//根据position对应集合中的对象位置，找到信息,设置到item中
-			DeliveryOrderDetail deliveryOrderDetail = goodsList.get(position);
+			GoodsDetail deliveryOrderDetail = goodsList.get(position);
 			goodsName.setText(deliveryOrderDetail.getSkuName());
 			goodsSum.setText(deliveryOrderDetail.getOutQty());
 		}

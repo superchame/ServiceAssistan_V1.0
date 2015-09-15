@@ -5,7 +5,6 @@ import java.util.List;
 import java.util.Map;
 import android.annotation.SuppressLint;
 import android.os.Bundle;
-import android.os.Handler;
 import android.os.Message;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -16,64 +15,50 @@ import android.widget.ListView;
 import android.widget.TextView;
 import com.cmbc.android.service_assistant.R;
 import com.cmbc.android.service_assistant.api.MyAdapter;
+import com.cmbc.android.service_assistant.api.MyHandler;
 import com.cmbc.android.service_assistant.api.NetService;
 import com.cmbc.android.service_assistant.api.OtherService;
-import com.cmbc.android.service_assistant.api.ParseTools;
 import com.cmbc.android.service_assistant.api.TitleActivity;
 import com.cmbc.android.service_assistant.entity.DeliveryOrder;
-import com.cmbc.android.service_assistant.entity.DeliveryOrderDetail;
+import com.cmbc.android.service_assistant.entity.GoodsDetail;
 import com.cmbc.android.service_assistant.entity.User;
 
 
 @SuppressLint("HandlerLeak")
 public class DeliveryOrderInfoActivity extends TitleActivity implements OnClickListener,OnItemClickListener{
-	//常量
-	private static final int SUCCESS = 1;
-	private static final int ERROR = 0;
 		
 	private ImageView backIcon, actionIcon;
 	private TextView title_tv,tv_outNo,tv_shopName,tv_orderCnt,tv_goodsSum,tv_totalGoodsSum;
 	private User userInfo;
 	private DeliveryOrder deliveryOrder;
-	private DeliveryOrderDetail deliveryOrderDetail;
+	private GoodsDetail deliveryOrderDetail;
 	private Bundle bundle;
-	private List<DeliveryOrderDetail> goodsList = new ArrayList<DeliveryOrderDetail>();
-	private List<DeliveryOrderDetail> goodsDetailList;
+	private List<GoodsDetail> goodsList = new ArrayList<GoodsDetail>();
+	private List<GoodsDetail> goodsDetailList;
 	private ListView listView;
 	private MyAdapter myAdapter;
-	private String jsonString,responseString;
 	private Map<String, Object> map;
 	
-	private Handler handler = new Handler(){
-
+	private MyHandler handler = new MyHandler(this){
 		@SuppressWarnings("unchecked")
-		@Override
 		public void handleMessage(Message msg) {
-			switch (msg.what) {
-			case SUCCESS:
-				jsonString = (String)msg.obj; 
-				map = ParseTools.getDeliveryOrderDetailResponse(jsonString);
-				responseString = (String) map.get("responseString");
-				if(responseString != null && responseString.equals("操作成功！")){
-					goodsDetailList = (List<DeliveryOrderDetail>) map.get("goodsDetailList");
-					deliveryOrderDetail = goodsDetailList.get(0);//一条item只对应一条信息，这里写成0
-					System.out.println(deliveryOrderDetail.toString());
-					OtherService.createViewDialog(DeliveryOrderInfoActivity.this,
-							deliveryOrderDetail.getSkuCode(),		
-							deliveryOrderDetail.getSkuName(),
-							deliveryOrderDetail.getSpuCode(),
-							deliveryOrderDetail.getOutQty(),
-							deliveryOrderDetail.getUnit()
-							);
-				}else{
-				}
-				break;
-			case ERROR:
+			super.handleMessage(msg,null);
+			if(passPort){
+				map = (Map<String, Object>) msg.obj;
+				goodsDetailList = (List<GoodsDetail>) map.get("goodsDetailList");
+				deliveryOrderDetail = goodsDetailList.get(0);//一条item只对应一条信息，这里写成0
+				System.out.println(deliveryOrderDetail.toString());
+				OtherService.createViewDialog(DeliveryOrderInfoActivity.this,
+						deliveryOrderDetail.getSkuCode(),		
+						deliveryOrderDetail.getSkuName(),
+						deliveryOrderDetail.getSpuCode(),
+						deliveryOrderDetail.getOutQty(),
+						deliveryOrderDetail.getUnit()
+						);
+			}else{
 				
-				break;
-			default:
-				break;
 			}
+				
 		}
 	};
 	@Override
@@ -91,7 +76,7 @@ public class DeliveryOrderInfoActivity extends TitleActivity implements OnClickL
 		
 		//从bundle中获取deliveryOrderDetail的对象，放入集合中
 		for(int i = 1 ; i < deliveryOrder.getGoodsSum()+1 ; i++){
-			goodsList.add((DeliveryOrderDetail) bundle.getParcelable(("deliveryOrderDetail"+i)));
+			goodsList.add((GoodsDetail) bundle.getParcelable(("deliveryOrderDetail"+i)));
 		}
 		
 		tv_outNo.setText(deliveryOrder.getOutNo());

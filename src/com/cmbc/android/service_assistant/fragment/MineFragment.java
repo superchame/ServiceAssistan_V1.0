@@ -1,11 +1,14 @@
 package com.cmbc.android.service_assistant.fragment;
 
 import com.cmbc.android.service_assistant.R;
+import com.cmbc.android.service_assistant.activity.LoginActivity;
 import com.cmbc.android.service_assistant.api.NetService;
+import com.cmbc.android.service_assistant.api.OtherService;
 import com.cmbc.android.service_assistant.entity.User;
-
 import android.annotation.SuppressLint;
 import android.app.Fragment;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -37,7 +40,6 @@ public class MineFragment extends Fragment {
 		
 		bundle = getActivity().getIntent().getExtras();
 		userInfo = bundle.getParcelable("userInfo");
-		
 		System.out.println(userInfo.toString());
 		
 		initial();
@@ -50,7 +52,10 @@ public class MineFragment extends Fragment {
 			@Override
 			public void onClick(View view) {
 					NetService.logoutService(userInfo.getLoginName(), userInfo.getToken());
+					//清除登陆的用户信息记录
+					OtherService.clearInfo(getActivity());		
 					getActivity().finish();
+					
 			}
 		});
 		

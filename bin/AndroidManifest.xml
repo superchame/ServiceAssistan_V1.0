@@ -13,6 +13,8 @@
     
     <uses-feature android:name="android.hardware.camera" />
     <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    
 
    
     
@@ -38,6 +40,7 @@
         <activity android:name="com.cmbc.android.service_assistant.activity.LoginActivity"
             android:theme="@style/mystyle"
             android:screenOrientation="portrait"
+            android:launchMode="singleTask"
             >
             <intent-filter >
                 <action android:name="com.cmbc.android.develop.assistant_of_minsheng" /><!-- 动作标识符 -->
@@ -80,9 +83,48 @@
            android:name="com.cmbc.android.service_assistant.activity.OrderFilterActivity"></activity>
         
          <activity
-           android:theme="@style/mystyle" 
+           android:theme="@style/AppBaseTheme" 
            android:screenOrientation="portrait" 
            android:name="com.cmbc.android.service_assistant.activity.TimePickerActivity"></activity>
+         
+         <activity 
+           android:theme="@style/mystyle" 
+           android:screenOrientation="portrait" 
+           android:name="com.cmbc.android.service_assistant.activity.FilterActivity"></activity>
+         
+          <activity 
+           android:theme="@style/mystyle" 
+           android:screenOrientation="portrait" 
+           android:name="com.cmbc.android.service_assistant.activity.OrderDetailActivity"></activity>
+          
+          <activity 
+           android:theme="@style/mystyle" 
+           android:screenOrientation="portrait" 
+           android:name="com.cmbc.android.service_assistant.activity.PurchaseSearchActivity"></activity>
+          
+           <activity 
+           android:theme="@style/mystyle" 
+           android:screenOrientation="portrait" 
+           android:name="com.cmbc.android.service_assistant.activity.PurchaseFilterActivity"></activity>
+          
+             <activity 
+           android:theme="@style/mystyle" 
+           android:screenOrientation="portrait" 
+           android:name="com.cmbc.android.service_assistant.activity.SupplierSearchActivity"></activity>
+             
+              <activity 
+           android:theme="@style/mystyle" 
+           android:screenOrientation="portrait" 
+           android:name="com.cmbc.android.service_assistant.activity.PurchaseDetailInfoActivity"></activity>
+              
+                <activity 
+           android:theme="@style/mystyle" 
+           android:screenOrientation="portrait" 
+           android:name="com.cmbc.android.service_assistant.activity.CountActivity"></activity>
+                
+                    
+             
+           
     </application>
     
     

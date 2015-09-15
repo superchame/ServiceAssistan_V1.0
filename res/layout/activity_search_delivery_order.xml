@@ -32,7 +32,7 @@
             android:layout_marginRight="5dp"
             android:textSize="16sp"
             android:singleLine="true"
-            android:text="PK20150706000003"
+            android:text=""
             android:hint="@string/activity_search_delivery_order_et"/>
         
         <ImageView 

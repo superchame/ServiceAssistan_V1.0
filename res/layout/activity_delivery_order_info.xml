@@ -185,11 +185,11 @@
          
 
          
-              <ListView
+              <com.cmbc.android.service_assistant.api.ListViewForScrollView
                   android:id="@+id/activity_delivery_order_info_lv"
                   android:layout_width="fill_parent"
                   android:layout_height="wrap_content" >
-				</ListView>
+				</com.cmbc.android.service_assistant.api.ListViewForScrollView>
             
     </LinearLayout>
      		

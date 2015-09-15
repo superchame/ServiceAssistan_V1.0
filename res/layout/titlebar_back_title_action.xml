@@ -19,7 +19,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_centerVertical="true"
-        android:layout_marginLeft="6dp"
+        android:paddingLeft="9dp"
+           android:paddingRight="20dp"
         android:src="@drawable/back" />
 
     <ImageView
@@ -28,7 +29,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
-        android:layout_marginRight="6dp"
-        android:src="@drawable/house1" />
+        android:paddingRight="6dp"
+        android:paddingLeft="15dp"
+        android:src="@drawable/saixuan" />
 
 </RelativeLayout>

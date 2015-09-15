@@ -91,4 +91,29 @@
     	<string name="fragment_search_purchasecount">采购单统计</string>
     	
     	<string name="fragment_store_storerec">门店收货</string>
+    	
+    	<string name="timepicker_title">日期选择</string>
+    	<string name="timepicker_ok">确定</string>
+    	
+    	<string name="activity_order_detail_order_No">订单单号</string>
+    	<string name="activity_order_detail_order_money">订单金额</string>
+    	<string name="activity_order_detail_order_type">订单类型</string>
+    	<string name="activity_order_detail_order_status">订单状态</string>
+    	<string name="activity_order_detail_order_time">订单时间</string>
+    	<string name="activity_order_detail_order_goodslist">产品列表</string>
+    	<string name="activity_order_detail_order_logistics_info">物流信息</string>
+    	
+    	<string name="purchase_detail_purchase_batch">采购批次</string>
+		<string name="purchase_detail_purchase_no">采购单号</string>  
+		<string name="purchase_detail_supplier">供应商</string>  	
+		<string name="purchase_detail_org">收货仓库</string>
+		<string name="purchase_detail_tibaoren">提报人</string>
+		<string name="purchase_detail_purchase_status">采购单状态</string>
+		<string name="purchase_detail_purchase_type">采购单类别</string>
+		<string name="purchase_detail_purchase_tibaotime">提报日期</string>
+		
+		
+		
+		
+		
 </resources>

@@ -13,8 +13,10 @@
       /> 
       
 	<TextView 
+	    android:layout_marginTop="7dp"
 	    android:layout_width="wrap_content"
 	    android:layout_height="wrap_content"
-	    android:text="Loading..."/>
+	    android:textColor="#000000"
+	    android:text="数据准备中，请稍后..."/>
     
 </LinearLayout>

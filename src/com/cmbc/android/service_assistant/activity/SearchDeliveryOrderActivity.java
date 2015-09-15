@@ -8,7 +8,6 @@ import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
 import android.os.Message;
 import android.text.TextUtils;
 import android.view.View;
@@ -19,12 +18,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 import com.cmbc.android.service_assistant.R;
+import com.cmbc.android.service_assistant.api.MyHandler;
 import com.cmbc.android.service_assistant.api.NetService;
 import com.cmbc.android.service_assistant.api.OtherService;
-import com.cmbc.android.service_assistant.api.ParseTools;
 import com.cmbc.android.service_assistant.api.TitleActivity;
 import com.cmbc.android.service_assistant.entity.DeliveryOrder;
-import com.cmbc.android.service_assistant.entity.DeliveryOrderDetail;
+import com.cmbc.android.service_assistant.entity.GoodsDetail;
 import com.cmbc.android.service_assistant.entity.User;
 import com.example.qr_codescan.MipcaActivityCapture;
 
@@ -33,32 +32,26 @@ import com.example.qr_codescan.MipcaActivityCapture;
 @SuppressLint("HandlerLeak")
 public class SearchDeliveryOrderActivity extends TitleActivity implements OnClickListener{
 	
-	//常量
-	private static final int SUCCESS = 1;
-	private static final int ERROR = 0;
-	
 	private TextView titleText;
 	private ImageView backIcon,qrCodeIcon;
 	private final static int SCANNIN_GREQUEST_CODE = 1;
 	private EditText deliveryOrder_et;
 	private Button search_btn;
-	private String jsonString,responseString;
 	private Map<String, Object> map;
 	private Bundle bundle;
 	private User userInfo;
 	private Dialog progressDialog;
 	
 	
-	private Handler handler = new Handler(){
+	private MyHandler handler = new MyHandler(this){
+	
 		@SuppressWarnings("unchecked")
-		@Override
 		public void handleMessage(Message msg) {
-			switch (msg.what) {
-			case SUCCESS:
-				jsonString = (String)msg.obj;
-				map = ParseTools.getDeliveryOrderResponse(jsonString);
-				responseString = (String)map.get("responseString");
-				if(responseString != null && responseString.equals("操作成功！")){
+			super.handleMessage(msg,progressDialog);
+			if(passPort){
+				map = 	(Map<String, Object>) msg.obj;
+				//只怕即使查询到出库单信息，也仍然为false
+				if((Boolean) map.get("error")){
 					DeliveryOrder deliveryOrder = new DeliveryOrder();
 					deliveryOrder.setOutNo((String)map.get("outNo"));
 					deliveryOrder.setShopName((String)map.get("shopName"));
@@ -67,27 +60,21 @@ public class SearchDeliveryOrderActivity extends TitleActivity implements OnClic
 					deliveryOrder.setOrderCnt(Integer.parseInt((String)map.get("orderCnt")));
 		
 					Intent intent = new Intent(SearchDeliveryOrderActivity.this, DeliveryOrderInfoActivity.class);
-					List<DeliveryOrderDetail> list = (List<DeliveryOrderDetail>) map.get("goodsList");
+					List<GoodsDetail> list = (List<GoodsDetail>) map.get("goodsList");
 					for(int i = 1; i < list.size()+1 ; i++){
-						DeliveryOrderDetail deliveryOrderDetail = list.get(i-1);
-						bundle.putParcelable("deliveryOrderDetail"+i, deliveryOrderDetail);
+					GoodsDetail deliveryOrderDetail = list.get(i-1);
+					bundle.putParcelable("deliveryOrderDetail"+i, deliveryOrderDetail);
 					}
 					bundle.putParcelable("deliveryOrder", deliveryOrder);
 					intent.putExtras(bundle);
-					progressDialog.dismiss();
 					startActivity(intent);
 				}else{
-					progressDialog.dismiss();
-					Toast.makeText(SearchDeliveryOrderActivity.this, responseString, Toast.LENGTH_SHORT).show();
+					Toast.makeText(SearchDeliveryOrderActivity.this, "没有出库单信息！", Toast.LENGTH_SHORT).show();
 				}
-				break;
-			case ERROR:
-				progressDialog.dismiss();
-				Toast.makeText(SearchDeliveryOrderActivity.this, "亲，你没有网络哦", Toast.LENGTH_SHORT).show();
-				break;
-			default:
-				break;
+			}else{
+				
 			}
+				
 		}
 	};
 	

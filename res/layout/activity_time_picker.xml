@@ -4,11 +4,46 @@
     android:layout_height="match_parent" 
     android:background="#F5F5F5">
 
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#FFFFFF"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+        
+        <ImageView 
+            android:id="@+id/backIcon"
+           	android:layout_width="wrap_content"
+           	android:layout_height="wrap_content"
+           	android:layout_marginLeft="9dp"
+           	android:src="@drawable/back"/>
+        
+        <TextView 
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="17sp"
+            android:text="@string/timepicker_title"/>
+        
+        <TextView 
+            android:id="@+id/ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:textSize="14sp"
+            android:layout_marginRight="9dp"
+            android:text="@string/timepicker_ok"/>
+        
+    </LinearLayout>
+    
     <DatePicker
-        android:id="@+id/datePicker1"
+        android:id="@+id/datePicker"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
+        android:calendarViewShown="false"
         android:layout_centerVertical="true" />
 
 </RelativeLayout>

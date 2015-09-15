@@ -35,7 +35,7 @@
 	            android:layout_weight="1"
 	            android:inputType="number"
 	            android:hint="@string/activity_login_name_et_hint"
-	            android:text="13146403211"
+	            android:text="18910943200"
 	 			android:background="@drawable/your_login_editborder"
 	            android:layout_marginLeft="20dp"
 	            android:layout_marginRight="30dp"
@@ -67,7 +67,7 @@
 	            android:layout_weight="1"
 	           android:inputType="textPassword"
 	            android:hint="@string/activity_login_pwd_et_hint"
-	            android:text="qqqq"
+	            android:text="zhouqiuye007"
 	            android:background="@drawable/your_login_editborder"
 	            android:layout_marginRight="30dp"
 	            android:layout_marginLeft="20dp"/>

@@ -4,7 +4,9 @@ package com.cmbc.android.service_assistant.fragment;
 
 
 import com.cmbc.android.service_assistant.R;
+import com.cmbc.android.service_assistant.activity.CountActivity;
 import com.cmbc.android.service_assistant.activity.OrderSearchActivity;
+import com.cmbc.android.service_assistant.activity.PurchaseSearchActivity;
 import com.cmbc.android.service_assistant.entity.User;
 
 import android.annotation.SuppressLint;
@@ -25,6 +27,12 @@ public class SearchFragment extends Fragment implements OnClickListener{
 	private User userInfo;
 	private View ordersearch,ordercount,purchasesearch,purchasecount;
 	private Bundle bundle;
+	
+	//区分不同统计的标识
+	private static final int ORDERCOUNT = 1;
+	private static final int PURCHASECOUNT = 2;
+	
+	
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
@@ -60,10 +68,21 @@ public class SearchFragment extends Fragment implements OnClickListener{
 			startActivity(intent);
 			break;
 		case R.id.purchasesearch_ll:
+			Intent intent2 = new Intent(getActivity(), PurchaseSearchActivity.class);
+			intent2.putExtras(bundle);
+			startActivity(intent2);
 			break;
 		case R.id.ordercount_ll:
+			Intent intent3 = new Intent(getActivity(), 	CountActivity.class);
+			bundle.putInt("countType", ORDERCOUNT);
+			intent3.putExtras(bundle);
+			startActivity(intent3);			
 			break;
 		case R.id.purchasecount_ll:
+			Intent intent4 = new Intent(getActivity(), CountActivity.class);
+			bundle.putInt("countType", PURCHASECOUNT);
+			intent4.putExtras(bundle);
+			startActivity(intent4);
 			break;
 		default:
 			break;
