@@ -116,7 +116,8 @@ public class LoginActivity extends TitleActivity {
 	@Override
 	protected void onDestroy() {
 		super.onDestroy();
-		System.exit(0);
+		//杀死自己的进程，如果用system.exit(0),那是将java虚拟机挂掉来关闭的，太暴力了
+		android.os.Process.killProcess(android.os.Process.myPid());
 	}
 	
 }
